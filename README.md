@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Blog Viewer Application
 
-## Getting Started
+## Overview
+A Next.js blog viewer application demonstrating routing, server/client components, dynamic routes, authentication, and data fetching.
 
-First, run the development server:
+## Features
+- Home page with blog post list
+- Dynamic blog post details page
+- Protected profile page with authentication
+- Responsive design
+- Authentication using Kinde Auth
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Prerequisites
+- Node.js (v18+)
+- npm or yarn
+- Kinde Auth account
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up Kinde Auth
+   - Create a Kinde account
+   - Configure authentication settings
+4. Create a `.env.local` file with Kinde credentials
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
+- `app/`: Next.js app directory
+  - `(auth)/`: Authentication-related routes
+  - `blog/`: Blog-related pages
+  - `profile/`: Profile page
+- `components/`: Reusable React components
+- `lib/`: Utility functions and API helpers
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
+- Next.js 14
+- React
+- Kinde Authentication
+- Tailwind CSS
+- JSONPlaceholder API
 
-## Learn More
+## Environment Variables
+- `KINDE_CLIENT_ID`
+- `KINDE_CLIENT_SECRET`
+- `KINDE_ISSUER_URL`
+- `KINDE_SITE_URL`
+- `KINDE_POST_LOGOUT_REDIRECT_URL`
+- `KINDE_POST_LOGIN_REDIRECT_URL`
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
