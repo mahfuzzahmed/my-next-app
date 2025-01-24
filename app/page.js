@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default async function Home() {
   const blogs = await getAllBlogs()
-  console.log(blogs)
+  // console.log(blogs)
   return (
     <main className="max-w-6xl mx-auto">
       <div>
@@ -12,7 +12,7 @@ export default async function Home() {
         <ul className="mt-6">
           {blogs.map(blog => (
             <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+              <Link className="hover:text-blue-400" href={`/blog/${blog.id}`}>{blog.title}</Link>
             </li>
           ))}
         </ul>
